@@ -1,0 +1,11 @@
+{
+  "name": "calendar_2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "0xflotus <0xflotus@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "execa": "^1.0.0",
+    "js-yaml": "^3.12.1"
+  }
+}
