@@ -6,9 +6,11 @@ after executing `calpla <path-to-file>` you find an out.pdf in your directory
 
 ## Features
 
-### Two Week Forecast
+### Custom template
 With `--tt` option, you can specify a template file (see [calpla.template](https://github.com/0xflotus/calpla/blob/master/calpla.template.tex)). 
-The days of the second week in the yaml-file need an _ after the day name.
+
+### Two week feature
+If the days in the yaml-config file have a trailing _, they will interpret as the next week
 
 ## Dependency
 You need `TeX Live` and `pdflatex` in your PATH

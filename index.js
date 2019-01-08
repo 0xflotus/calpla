@@ -32,14 +32,18 @@ try {
     .replace(/%%WED/, getTask(doc.week.wednesday))
     .replace(/%%THU/, getTask(doc.week.thursday))
     .replace(/%%FRI/, getTask(doc.week.friday))
-    .replace(/%%SAT/, getTask(doc.week.saturday))
-    .replace(/%%SUN/, getTask(doc.week.sunday_))
-    .replace(/%%MON/, getTask(doc.week.monday_))
-    .replace(/%%TUE/, getTask(doc.week.tuesday_))
-    .replace(/%%WED/, getTask(doc.week.wednesday_))
-    .replace(/%%THU/, getTask(doc.week.thursday_))
-    .replace(/%%FRI/, getTask(doc.week.friday_))
-    .replace(/%%SAT/, getTask(doc.week.saturday_));
+    .replace(/%%SAT/, getTask(doc.week.saturday));
+
+  if (Object.keys(doc.week).some(_ => /day_$/.test(_))) {
+    replace = replace
+      .replace(/%%SUN_/, getTask(doc.week.sunday_))
+      .replace(/%%MON_/, getTask(doc.week.monday_))
+      .replace(/%%TUE_/, getTask(doc.week.tuesday_))
+      .replace(/%%WED_/, getTask(doc.week.wednesday_))
+      .replace(/%%THU_/, getTask(doc.week.thursday_))
+      .replace(/%%FRI_/, getTask(doc.week.friday_))
+      .replace(/%%SAT_/, getTask(doc.week.saturday_));
+  }
 } catch (_) {
   log("Error during reading values from yaml");
 }
