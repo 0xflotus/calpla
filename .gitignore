@@ -1,0 +1,9 @@
+node_modules
+example
+*.aux
+*.pdf
+*.log
+yarn.lock
+*.fls
+*.fdb_latexmk
+*synctex.gz
