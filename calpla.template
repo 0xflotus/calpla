@@ -30,7 +30,7 @@
 
 %%SUN
 
-\day{}{}
+\day{}{} % workaround for valid tex file
 
  
 \finishCalendar
