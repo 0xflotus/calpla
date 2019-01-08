@@ -23,13 +23,13 @@ try {
     .replace(/%%TITLE/, `${doc.title || "TimeTable"}\\\\`)
     .replace(/%%DATE/, doc.week.start)
     .replace("\\day{}{}", "")
-    .replace(/%%SUN/g, getTask(doc.week.sunday))
-    .replace(/%%MON/g, getTask(doc.week.monday))
-    .replace(/%%TUE/g, getTask(doc.week.tuesday))
-    .replace(/%%WED/g, getTask(doc.week.wednesday))
-    .replace(/%%THU/g, getTask(doc.week.thursday))
-    .replace(/%%FRI/g, getTask(doc.week.friday))
-    .replace(/%%SAT/g, getTask(doc.week.saturday));
+    .replace(/%%SUN/, getTask(doc.week.sunday))
+    .replace(/%%MON/, getTask(doc.week.monday))
+    .replace(/%%TUE/, getTask(doc.week.tuesday))
+    .replace(/%%WED/, getTask(doc.week.wednesday))
+    .replace(/%%THU/, getTask(doc.week.thursday))
+    .replace(/%%FRI/, getTask(doc.week.friday))
+    .replace(/%%SAT/, getTask(doc.week.saturday));
 } catch (_) {
   console.log("Error during reading values from yaml");
   process.exit(-1);
