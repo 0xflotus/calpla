@@ -5,20 +5,20 @@ fs = require("fs");
 execa = require("execa").shellSync;
 glob = require("glob");
 
+if (process.argv.slice(2).length === 0) {
+  log("You need to specify a yaml file");
+}
+
 try {
-  var doc = yaml.safeLoad(
-    fs.readFileSync(process.argv[2] || "./example/timetable.yml", "utf8")
-  );
-} catch (e) {
-  console.log("Error during parse yaml-file");
-  process.exit(-1);
+  var doc = yaml.safeLoad(fs.readFileSync(process.argv[2], "utf8"));
+} catch (_) {
+  log("Error during parse yaml-file");
 }
 
 try {
   var tex = fs.readFileSync("calpla.template", "utf-8");
 } catch (_) {
-  console.log("Error while reading calpla.template");
-  process.exit(-1);
+  log("Error while reading calpla.template");
 }
 try {
   var replace = tex
@@ -33,8 +33,7 @@ try {
     .replace(/%%FRI/, getTask(doc.week.friday))
     .replace(/%%SAT/, getTask(doc.week.saturday));
 } catch (_) {
-  console.log("Error during reading values from yaml");
-  process.exit(-1);
+  log("Error during reading values from yaml");
 }
 
 fs.writeFileSync("out.tex", replace);
@@ -68,4 +67,9 @@ function cleanup() {
       if (err) console.log(err);
     });
   });
+}
+
+function log(message) {
+  console.log(message);
+  process.exit(-1);
 }
