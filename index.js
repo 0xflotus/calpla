@@ -46,12 +46,14 @@ function getTask(date) {
   return date
     ? Array.isArray(date)
       ? `\\day{}{
-    ${date.map(
-      day =>
-        `\\textbf{${day.begin || ""} ${
-          day.end ? "- " + day.end : ""
-        }} \\daysep ${day.task || ""}\\\\`
-    )}
+    ${date
+      .map(
+        day =>
+          `\\textbf{${day.begin || ""} ${
+            day.end ? "- " + day.end : ""
+          }} \\daysep ${day.task || ""}`
+      )
+      .join("\\\\")}
   }`
       : `\\day{}{
       \\textbf{${date.begin || ""} ${
