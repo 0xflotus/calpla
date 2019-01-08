@@ -1,8 +1,8 @@
 {
-  "name": "calendar_2",
+  "name": "calpla",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "0xflotus <0xflotus@gmail.com>",
+  "author": "0xflotus",
   "license": "MIT",
   "dependencies": {
     "execa": "^1.0.0",
