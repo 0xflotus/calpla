@@ -2,7 +2,7 @@
 Calendar Planning
 
 ## Usage
-after `calpla <path-to-file>` to find an out.pdf in your directory
+after executing `calpla <path-to-file>` you find an out.pdf in your directory
 
 ## Dependency
 You need `TeX Live` and `pdflatex` in your PATH
