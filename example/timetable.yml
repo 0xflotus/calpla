@@ -1,0 +1,30 @@
+title: TimeTable
+week:
+  start: 14/01/2019 - 20/01/2019
+  monday:
+    begin: '09:08'
+    end: '10:34'
+    task: Task 1
+  tuesday:
+    begin: '09:08'
+    end: '10:34'
+    task: Task 2
+  wednesday:
+    begin: '09:08'
+    end: '10:34'
+    task: Task 3
+  thursday:
+    - begin: '09:08'
+      end: '10:34'
+      task: Task 4
+    - begin: '10:08'
+      end: '11:34'
+      task: Task 5
+  friday:
+    begin: '09:08'
+    end: '10:34'
+    task: Task 6
+  saturday:
+    begin: '09:08'
+    end: '10:34'
+    task: Task 7
