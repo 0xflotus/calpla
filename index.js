@@ -20,8 +20,8 @@ try {
 }
 try {
   var replace = tex
-    .replace(/%%TITLE/, `${doc.title || "TimeTable"}\\\\`)
-    .replace(/%%DATE/, doc.week.start)
+    .replace(/%%TITLE/, `\\textsc{\\LARGE ${doc.title || "TimeTable"}}\\\\`)
+    .replace(/%%DATE/, `\\textsc{\\large ${doc.week.start || ""}}`)
     .replace("\\day{}{}", "")
     .replace(/%%SUN/, getTask(doc.week.sunday))
     .replace(/%%MON/, getTask(doc.week.monday))
@@ -46,11 +46,16 @@ function getTask(date) {
     ? Array.isArray(date)
       ? `\\day{}{
     ${date.map(
-      day => `\\textbf{${day.begin} - ${day.end}} \\daysep ${day.task}\\\\`
+      day =>
+        `\\textbf{${day.begin || ""} ${
+          day.end ? "- " + day.end : ""
+        }} \\daysep ${day.task || ""}\\\\`
     )}
   }`
       : `\\day{}{
-      \\textbf{${date.begin} - ${date.end}} \\daysep ${date.task}
+      \\textbf{${date.begin || ""} ${
+          date.end ? "- " + date.end : ""
+        }} \\daysep ${date.task || ""}
     }`
     : `\\day{}{}`;
 }
