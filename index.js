@@ -18,7 +18,7 @@ try {
 }
 
 try {
-  var tex = fs.readFileSync(cTemplate || "calpla.template", "utf-8");
+  var tex = fs.readFileSync(cTemplate || "calpla.template.tex", "utf-8");
 } catch (_) {
   log("Error while reading template");
 }
