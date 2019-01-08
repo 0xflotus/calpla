@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "0xflotus",
+  "bin": {
+    "calpla": "./index.js"
+  },
   "license": "BSD-3-Clause",
   "dependencies": {
     "execa": "^1.0.0",
