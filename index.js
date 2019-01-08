@@ -4,7 +4,9 @@ execa = require("execa").shellSync;
 glob = require("glob");
 
 try {
-  var doc = yaml.safeLoad(fs.readFileSync("./example/timetable.yml", "utf8"));
+  var doc = yaml.safeLoad(
+    fs.readFileSync(process.argv[2] || "./example/timetable.yml", "utf8")
+  );
 } catch (e) {
   console.log("Error during parse yaml-file");
   process.exit(-1);
@@ -18,7 +20,7 @@ try {
 }
 try {
   var replace = tex
-    .replace(/%%TITLE/, "Timetable\\\\")
+    .replace(/%%TITLE/, `${doc.title || "TimeTable"}\\\\`)
     .replace(/%%DATE/, doc.week.start)
     .replace("\\day{}{}", "")
     .replace(/%%SUN/g, getTask(doc.week.sunday))
