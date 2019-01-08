@@ -7,7 +7,7 @@
            LaTeX2e class file `calendar' v\CalendarVersion]
 
 \typeout{'calendar' style \CalendarVersion \CalendarVersionDate.}
-\typeout{Created by Evan Sultanik}
+\typeout{Created by Evan Sultanik, edited by 0xflotus}
 \typeout{****** Bugs/comments/suggestions/technicalities to Evan Sultanik -- evan@sultanik.com ******}
 
 \RequirePackage{tabularx}
@@ -39,13 +39,13 @@
 \def\printdayname#1{\hfil\textsc{#1}\hfil}
 
 \newcommand{\dayname}[1]{
-  \ifnum#1=1 Sunday\else
-  \ifnum#1=2 Monday\else
-  \ifnum#1=3 Tuesday\else
-  \ifnum#1=4 Wednesday\else
-  \ifnum#1=5 Thursday\else
-  \ifnum#1=6 Friday\else
-  \ifnum#1=7 Saturday\else
+  \ifnum#1=1 Monday\else
+  \ifnum#1=2 Tuesday\else
+  \ifnum#1=3 Wednesday\else
+  \ifnum#1=4 Thursday\else
+  \ifnum#1=5 Friday\else
+  \ifnum#1=6 Saturday\else
+  \ifnum#1=7 Sunday\else
     \PackageError{calendar}{Unrecognized day number: #1!}
   \fi\fi\fi\fi\fi\fi\fi
 }

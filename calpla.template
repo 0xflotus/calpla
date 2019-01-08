@@ -16,8 +16,6 @@
 
 \begin{calendar}{\textwidth} 
 
-%%SUN
-
 %%MON
 
 %%TUE
@@ -29,6 +27,8 @@
 %%FRI
 
 %%SAT
+
+%%SUN
 
 \day{}{}
 
