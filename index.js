@@ -3,7 +3,6 @@
 yaml = require("js-yaml");
 fs = require("fs");
 execa = require("execa").shellSync;
-glob = require("glob");
 
 if (process.argv.slice(2).length === 0) {
   log("You need to specify a yaml file");
