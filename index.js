@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 yaml = require("js-yaml");
 fs = require("fs");
 execa = require("execa").shellSync;
