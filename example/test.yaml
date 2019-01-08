@@ -1,0 +1,15 @@
+title: Important Calendar!
+week:
+  start: '07/01/2019 - 13/01/2019'
+  monday:
+    - begin: '4:00'
+      task: Wake up.
+    - begin: '8:00'
+      end: '16:30'
+      task: Do work.
+  friday:
+    begin: '16:00'
+    task: 'Weekend'
+  saturday:
+    begin: '22:00'
+    task: Party!!
