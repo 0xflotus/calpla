@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "0xflotus",
-  "license": "MIT",
+  "license": "BSD-3-Clause",
   "dependencies": {
     "execa": "^1.0.0",
     "js-yaml": "^3.12.1"
