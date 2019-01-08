@@ -7,7 +7,7 @@ week:
     - begin: '8:00'
       end: '16:30'
       task: Do work.
-  friday:
+  friday_:
     begin: '16:00'
     task: 'Weekend'
   saturday:

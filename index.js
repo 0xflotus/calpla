@@ -7,6 +7,8 @@ glob = require("glob");
 
 if (process.argv.slice(2).length === 0) {
   log("You need to specify a yaml file");
+} else if (/--tt/.test(process.argv.join())) {
+  var cTemplate = process.argv[process.argv.indexOf("--tt") + 1];
 }
 
 try {
@@ -16,9 +18,9 @@ try {
 }
 
 try {
-  var tex = fs.readFileSync("calpla.template", "utf-8");
+  var tex = fs.readFileSync(cTemplate || "calpla.template", "utf-8");
 } catch (_) {
-  log("Error while reading calpla.template");
+  log("Error while reading template");
 }
 try {
   var replace = tex
@@ -31,7 +33,14 @@ try {
     .replace(/%%WED/, getTask(doc.week.wednesday))
     .replace(/%%THU/, getTask(doc.week.thursday))
     .replace(/%%FRI/, getTask(doc.week.friday))
-    .replace(/%%SAT/, getTask(doc.week.saturday));
+    .replace(/%%SAT/, getTask(doc.week.saturday))
+    .replace(/%%SUN/, getTask(doc.week.sunday_))
+    .replace(/%%MON/, getTask(doc.week.monday_))
+    .replace(/%%TUE/, getTask(doc.week.tuesday_))
+    .replace(/%%WED/, getTask(doc.week.wednesday_))
+    .replace(/%%THU/, getTask(doc.week.thursday_))
+    .replace(/%%FRI/, getTask(doc.week.friday_))
+    .replace(/%%SAT/, getTask(doc.week.saturday_));
 } catch (_) {
   log("Error during reading values from yaml");
 }
