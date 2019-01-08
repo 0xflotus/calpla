@@ -1,0 +1,30 @@
+title: TimeTable
+week:
+  start: 20/01/2019
+  monday:
+    begin: 09:08
+    end: '10:34'
+    task: gassi gehen
+  tuesday:
+    begin: 09:08
+    end: 10:34
+    task: gassi gehen
+  wednesday:
+    begin: 09:08
+    end: 10:34
+    task: gassi gehen
+  thursday:
+    - begin: 09:08
+      end: 10:34
+      task: gassi gehen
+    - begin: '10:08'
+      end: '11:34'
+      task: gassi gehen2
+  friday:
+    begin: 09:08
+    end: 10:34
+    task: gassi gehen
+  saturday:
+    begin: 09:08
+    end: 10:34
+    task: gassi gehen
