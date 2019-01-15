@@ -1,2 +1,10 @@
 .gitignore
 examples/
+
+*.aux
+*.pdf
+*.log
+yarn.lock
+*.fls
+*.fdb_latexmk
+*synctex.gz
