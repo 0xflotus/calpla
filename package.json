@@ -3,6 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "0xflotus",
+  "keywords": ["latex", "calpla", "planning", "calendar"],
+  "homepage": "https://github.com/0xflotus/calpla#readme",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/0xflotus/calpla.git"
+  },
   "bin": {
     "calpla": "./index.js"
   },
