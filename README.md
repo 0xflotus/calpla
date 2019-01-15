@@ -1,3 +1,5 @@
+[![DeepScan grade](https://deepscan.io/api/teams/2759/projects/4064/branches/33877/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=2759&pid=4064&bid=33877)
+
 # calpla
 Calendar Planning
 
