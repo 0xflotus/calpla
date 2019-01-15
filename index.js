@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-yaml = require("js-yaml");
-fs = require("fs");
-execa = require("execa").shellSync;
+const yaml = require("js-yaml");
+const fs = require("fs");
+const execa = require("execa").shellSync;
 
 if (process.argv.slice(2).length === 0) {
   log("You need to specify a yaml file");
