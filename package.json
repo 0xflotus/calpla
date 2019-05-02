@@ -1,13 +1,18 @@
 {
   "name": "calpla",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "index.js",
   "author": "0xflotus",
-  "keywords": ["latex", "calpla", "planning", "calendar"],
+  "keywords": [
+    "latex",
+    "calpla",
+    "planning",
+    "calendar"
+  ],
   "homepage": "https://github.com/0xflotus/calpla#readme",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/0xflotus/calpla.git"
+    "type": "git",
+    "url": "https://github.com/0xflotus/calpla.git"
   },
   "bin": {
     "calpla": "./index.js"
@@ -15,6 +20,6 @@
   "license": "BSD-3-Clause",
   "dependencies": {
     "execa": "^1.0.0",
-    "js-yaml": "^3.12.1"
+    "js-yaml": "^3.13.1"
   }
 }
