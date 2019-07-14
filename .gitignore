@@ -2,7 +2,6 @@ node_modules
 *.aux
 *.pdf
 *.log
-yarn.lock
 *.fls
 *.fdb_latexmk
 *synctex.gz
